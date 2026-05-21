@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduate Celebration RSVP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f4f1ec;
+      color: #2b2b2b;
+      padding: 20px;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fffaf3;
+      border: 1px solid #ddd3c5;
+      border-radius: 22px;
+      padding: 35px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 18px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      border-bottom: 1px solid #ddd3c5;
+      padding-bottom: 8px;
+    }
+
+    .event {
+      background: #f8f3eb;
+      border: 1px solid #e0d6c8;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border: 1px solid #cfc4b7;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    .radio-option {
+      font-weight: normal;
+      background: #ffffff;
+      border: 1px solid #e0d6c8;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .radio-option input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #2b241f;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d1815;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>Graduate Celebration</h1>
+      <p class="subtitle">Please join us in celebrating the graduation of Kevin Galarza.</p>
+    </header>
+
+    <section>
+      <h2>Schedule of Events</h2>
+
+      <div class="event">
+        <h3>Commencement Ceremony</h3>
+        <p><strong>Time:</strong> 12:00 PM – 3:00 PM</p>
+        <p><strong>Location:</strong> Prudential Center, Newark, NJ</p>
+      </div>
+
+      <div class="event">
+        <h3>Dinner Celebration</h3>
+        <p><strong>Time:</strong> 5:00 PM</p>
+        <p><strong>Location:</strong> River & Henley Bar & Restaurant, New Milford, NJ</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>RSVP</h2>
+
+      <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="Full Name" required>
+
+        <label for="additional-guests">Will you be bringing additional guests?</label>
+        <select id="additional-guests" name="Bringing Additional Guests" required>
+          <option value="">Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="guest-names">Guest Names</label>
+        <textarea id="guest-names" name="Guest Names" placeholder="List the full names of additional guests here."></textarea>
+
+        <label>Will your party attend the Commencement Ceremony? (12 PM – 3 PM)</label>
+        <label class="radio-option">
+          <input type="radio" name="Ceremony Attendance" value="Yes, everyone will attend" required>
+          Yes, everyone will attend
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="Ceremony Attendance" value="Only some of us will attend">
+          Only some of us will attend
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="Ceremony Attendance" value="No, we cannot attend">
+          No, we cannot attend
+        </label>
+
+        <label>Will your party attend the Dinner Celebration? (5 PM)</label>
+        <label class="radio-option">
+          <input type="radio" name="Dinner Attendance" value="Yes, everyone will attend" required>
+          Yes, everyone will attend
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="Dinner Attendance" value="Only some of us will attend">
+          Only some of us will attend
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="Dinner Attendance" value="No, we cannot attend">
+          No, we cannot attend
+        </label>
+
+        <label for="dietary">Dietary Restrictions</label>
+        <input type="text" id="dietary" name="Dietary Restrictions" placeholder="Food allergies or dietary restrictions">
+
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
